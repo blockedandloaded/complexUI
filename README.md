@@ -39,6 +39,7 @@ Yes! We are available for hire. Visit [our homepage](http://akveo.com/) or simpl
 * etc
 
 License
+-------------
 <a href=/LICENSE.txt target="_blank">MIT</a> license.
 
 ### From akveo

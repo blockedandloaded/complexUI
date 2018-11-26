@@ -17,20 +17,20 @@
           templateUrl: 'app/pages/components/mail/mail.html',
           controller: "MailTabCtrl",
           controllerAs: "tabCtrl",
-          title: 'Mail',
+          title: 'My Transactions',
           sidebarMeta: {
             order: 0,
           },
         }).state('components.mail.label', {
           url: '/:label',
           templateUrl: 'app/pages/components/mail/list/mailList.html',
-          title: 'Mail',
+          title: 'My Transactions',
           controller: "MailListCtrl",
           controllerAs: "listCtrl"
         }).state('components.mail.detail', {
           url: '/:label/:id',
           templateUrl: 'app/pages/components/mail/detail/mailDetail.html',
-          title: 'Mail',
+          title: 'My Transactions',
           controller: "MailDetailCtrl",
           controllerAs: "detailCtrl"
         });

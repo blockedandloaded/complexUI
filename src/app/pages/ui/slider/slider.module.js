@@ -14,7 +14,7 @@
         .state('ui.slider', {
           url: '/slider',
           templateUrl: 'app/pages/ui/slider/slider.html',
-          title: 'Sliders',
+          title: 'FAQs',
           sidebarMeta: {
             order: 1000,
           },

@@ -26,39 +26,17 @@
     $scope.socialProfiles = [
       {
         name: 'Facebook',
-        href: 'https://www.facebook.com/akveo/',
+        href: 'https://www.facebook.com/kimiaazargarii/',
         icon: 'socicon-facebook'
       },
       {
         name: 'Twitter',
-        href: 'https://twitter.com/akveo_inc',
+        href: 'https://twitter.com/kimiazargari',
         icon: 'socicon-twitter'
       },
       {
         name: 'Google',
         icon: 'socicon-google'
-      },
-      {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/company/akveo',
-        icon: 'socicon-linkedin'
-      },
-      {
-        name: 'GitHub',
-        href: 'https://github.com/akveo',
-        icon: 'socicon-github'
-      },
-      {
-        name: 'StackOverflow',
-        icon: 'socicon-stackoverflow'
-      },
-      {
-        name: 'Dribbble',
-        icon: 'socicon-dribble'
-      },
-      {
-        name: 'Behance',
-        icon: 'socicon-behace'
       }
     ];
 
@@ -69,8 +47,8 @@
     $scope.showModal = function (item) {
       $uibModal.open({
         animation: false,
-        controller: 'ProfileModalCtrl',
-        templateUrl: 'app/pages/profile/profileModal.html'
+        controller: 'SettingsModalCtrl',
+        templateUrl: 'app/pages/settings/settingsModal.html'
       }).result.then(function (link) {
           item.href = link;
         });

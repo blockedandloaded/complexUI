@@ -13,7 +13,7 @@
     var messages = [
       {
         "id": "4563faass",
-        "name": "Nasta Linnie",
+        "name": "GUN NAME 1",
         "subject": "Great text",
         "date": "2015-08-28T07:57:09",
         "body": $sce.trustAsHtml("<p>Hey John, </p><p>Check out this cool text.</p>"),
@@ -21,12 +21,12 @@
         "email": "petraramsey@mail.com",
         "attachment": "poem.txt",
         "position": "Great Employee",
-        "tag": "friend",
+        "tag": "bought",
         "labels": ['inbox']
       },
       {
         "id": "4563fdfvd",
-        "name": "Nasta Linnie",
+        "name": "GUN NAME 2",
         "subject": "Lores ipsum",
         "date": "2015-11-19T03:30:45",
         "important": false,
@@ -35,12 +35,12 @@
         "pic": "img/Nasta.png",
         "email": "petraramsey@mail.com",
         "position": "Great Employee",
-        "tag": "study",
+        "tag": "sold",
         "labels": ['inbox']
       },
       {
         "id": "4563zxcss",
-        "name": "Nasta Linnie",
+        "name": "GUN NAME 3",
         "subject": "Lores ipsum",
         "date": "2015-10-19T03:30:45",
         "important": false,
@@ -48,12 +48,12 @@
         "pic": "img/Nasta.png",
         "email": "petraramsey@mail.com",
         "position": "Great Employee",
-        "tag": "work",
+        "tag": "bought",
         "labels": ['sent', 'important']
       },
       {
         "id": "8955sddf",
-        "name": "Nick Cat",
+        "name": "GUN NAME 4",
         "subject": "New Design",
         "date": "2015-05-05T12:59:45",
         "body": $sce.trustAsHtml("<p>Hey John, Consectetur adipiscing elit</p><br>" +
@@ -62,36 +62,36 @@
         "email": "barlowshort@mail.com",
         "position": "Graphical designer",
         "attachment": "design.psd",
-        "tag": "work",
+        "tag": "bought",
         "labels": ['inbox']
       },
       {
         "id": "8955sdfcc",
-        "name": "Nick Cat",
+        "name": "GUN NAME 5",
         "subject": "Gift card",
         "date": "2015-07-18T10:19:01",
         "body": $sce.trustAsHtml("<p>Hey John, </p><br><p>Consectetur adipiscing elit, Lorem ipsum dolor sit amet</p>"),
         "pic": "img/Nick.png",
         "email": "barlowshort@mail.com",
         "position": "Graphical designer",
-        "tag": "study",
+        "tag": "sold",
         "labels": ['inbox']
       },
       {
         "id": "8955asewf",
-        "name": "Nick Cat",
+        "name": "GUN NAME 6",
         "subject": "Some news",
         "date": "2015-09-23T03:04:10",
         "body": $sce.trustAsHtml("<p>Hey John, </p><br><p>Integer eu nisl elit. Donec malesuada diam vitae tellus luctus tincidunt. Donec tempus blandit neque, rutrum egestas ipsum sagittis tempor. Curabitur volutpat ligula enim, nec vehicula purus molestie at. Sed a facilisis enim, nec molestie magna. Donec in augue non est viverra dapibus vel tempus risus. Nam porttitor purus sit amet hendrerit ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>"),
         "pic": "img/Nick.png",
         "email": "barlowshort@mail.com",
         "position": "Graphical designer",
-        "tag": "work",
+        "tag": "sold",
         "labels": ['inbox', 'important']
       },
       {
         "id": "2334uudsa",
-        "name": "Kostya Danovsky",
+        "name": "GUN NAME 6",
         "subject": "Street Art",
         "date": "2015-11-22T10:05:09",
         "body": $sce.trustAsHtml("<p>Hey John, </p><p>Aliquam eu facilisis eros, quis varius est.</p>" +
@@ -103,12 +103,12 @@
         "email": "schwart@mail.com",
         "position": "Technical Chef",
         "attachment": "file.doc",
-        "tag": "family",
+        "tag": "sold",
         "labels": ['inbox', 'important']
       },
       {
         "id": "2334aefvv",
-        "name": "Kostya Danovsky",
+        "name": "GUN NAME 7",
         "subject": "New product",
         "date": "2015-06-22T06:26:10",
         "body": $sce.trustAsHtml("<p>Hello John, </p><p>Lorem ipsum dolor sit amet!</p>" +
@@ -119,12 +119,12 @@
         "pic": "img/Kostya.png",
         "email": "schwart@mail.com",
         "position": "Technical Chef",
-        "tag": "family",
+        "tag": "sold",
         "labels": ['inbox', 'important']
       },
       {
         "id": "2334cvdss",
-        "name": "Kostya Danovsky",
+        "name": "GUN NAME 8",
         "subject": "Old product",
         "date": "2015-06-22T06:26:10",
         "body": $sce.trustAsHtml("<p>Hello John, </p>" +
@@ -134,12 +134,12 @@
         "pic": "img/Kostya.png",
         "email": "schwart@mail.com",
         "position": "Technical Chef",
-        "tag": "study",
+        "tag": "sold",
         "labels": ['trash']
       },
       {
         "id": "8223xzxfn",
-        "name": "Andrey Hrabouski",
+        "name": "GUN NAME 9",
         "subject": "Skype moji",
         "date": "2015-07-16T06:47:53",
         "body": $sce.trustAsHtml("<p>Hello John, </p><p>Aliquam sodales sem in nibh pellentesque</p>" +
@@ -147,12 +147,12 @@
         "pic": "img/Andrey.png",
         "email": "lakeishaphillips@mail.com",
         "position": "Mobile Developer",
-        "tag": 'family',
+        "tag": 'sold',
         "labels": ['trash']
       },
       {
         "id": "8223sdffn",
-        "name": "Andrey Hrabouski",
+        "name": "GUN NAME 10",
         "subject": "My App",
         "date": "2015-06-20T07:05:02",
         "body": $sce.trustAsHtml("<p>Hey Vlad. </p><p>Lorem ipsum dolor sit amet!</p>" +
@@ -160,12 +160,12 @@
         "pic": "img/Andrey.png",
         "email": "lakeishaphillips@mail.com",
         "position": "Mobile Developer",
-        "tag": 'family',
+        "tag": 'sold',
         "labels": ['spam']
       },
       {
         "id": "9391xdsff",
-        "name": "Vlad Lugovsky",
+        "name": "GUN NAME 11",
         "subject": "Cool",
         "date": "2015-03-31T11:52:58",
         "body": $sce.trustAsHtml("<p>Hey Vlad. </p><p>Aliquam sodales sem in nibh pellentesque</p>" +
@@ -173,12 +173,12 @@
         "pic": "img/Vlad.png",
         "email": "carlsongoodman@mail.com",
         "position": "Fullstack man",
-        "tag": "study",
+        "tag": "bought",
         "labels": ['draft']
       },
       {
         "id": "8223xsdaa",
-        "name": "Andrey Hrabouski",
+        "name": "GUN NAME 12",
         "subject": "Car rent",
         "date": "2015-02-25T10:58:58",
         "body": $sce.trustAsHtml("<p>Hey Andrey. </p>" +
@@ -186,12 +186,12 @@
         "pic": "img/Andrey.png",
         "email": "lakeishaphillips@mail.com",
         "position": "Mobile Developer",
-        "tag": "family",
+        "tag": "sold",
         "labels": ['draft']
       },
       {
         "id": "9391xdsff",
-        "name": "Vlad Lugovsky",
+        "name": "GUN NAME 13",
         "subject": "What next",
         "date": "2015-03-31T11:52:58",
         "body": $sce.trustAsHtml("<p>Hey Vlad. </p><p>Lorem ipsum dolor sit amet!</p>" +
@@ -199,7 +199,7 @@
         "pic": "img/Vlad.png",
         "email": "carlsongoodman@mail.com",
         "position": "Fullstack man",
-        "tag": "study",
+        "tag": "bought",
         "labels": ['sent']
       }
     ].sort(function (a, b) {

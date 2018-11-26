@@ -12,7 +12,7 @@
   function routeConfig($stateProvider) {
     $stateProvider
         .state('profile', {
-          url: '/profile',
+          url: '/settings',
           title: 'Profile',
           templateUrl: 'app/pages/profile/profile.html',
           controller: 'ProfilePageCtrl',

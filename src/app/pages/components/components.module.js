@@ -8,7 +8,7 @@
   angular.module('BlurAdmin.pages.components', [
     'BlurAdmin.pages.components.mail',
     'BlurAdmin.pages.components.timeline',
-    'BlurAdmin.pages.components.tree',
+    // 'BlurAdmin.pages.components.tree',
   ])
       .config(routeConfig);
 
@@ -19,7 +19,7 @@
           url: '/components',
           template : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
           abstract: true,
-          title: 'Components',
+          title: 'Dashboard',
           sidebarMeta: {
             icon: 'ion-gear-a',
             order: 100,

@@ -7,13 +7,13 @@
 
   angular.module('BlurAdmin.pages.ui', [
     'BlurAdmin.pages.ui.typography',
-    'BlurAdmin.pages.ui.buttons',
-    'BlurAdmin.pages.ui.icons',
-    'BlurAdmin.pages.ui.modals',
-    'BlurAdmin.pages.ui.grid',
-    'BlurAdmin.pages.ui.alerts',
-    'BlurAdmin.pages.ui.progressBars',
-    'BlurAdmin.pages.ui.notifications',
+    //'BlurAdmin.pages.ui.buttons',
+    //'BlurAdmin.pages.ui.icons',
+    //'BlurAdmin.pages.ui.modals',
+    //'BlurAdmin.pages.ui.grid',
+    //'BlurAdmin.pages.ui.alerts',
+    //'BlurAdmin.pages.ui.progressBars',
+    //'BlurAdmin.pages.ui.notifications',
     'BlurAdmin.pages.ui.tabs',
     'BlurAdmin.pages.ui.slider',
     'BlurAdmin.pages.ui.panels',
@@ -27,9 +27,9 @@
           url: '/ui',
           template : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
           abstract: true,
-          title: 'UI Features',
+          title: 'Home',
           sidebarMeta: {
-            icon: 'ion-android-laptop',
+            icon: 'ion-android-home',
             order: 200,
           },
         });

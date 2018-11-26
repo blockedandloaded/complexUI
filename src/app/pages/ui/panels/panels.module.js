@@ -15,7 +15,7 @@
           url: '/panels',
           templateUrl: 'app/pages/ui/panels/panels.html',
           controller: 'NotificationsPageCtrl',
-          title: 'Panels',
+          title: 'Technical Details',
           sidebarMeta: {
             order: 1100,
           },
