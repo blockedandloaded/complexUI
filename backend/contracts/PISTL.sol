@@ -1,43 +1,43 @@
-pragma ^0.4.17;
+pragma solidity ^0.4.17;
 
 /**
  * @title Ownable
  * @dev The Ownable contract has an owner address, and provides basic authorization control
  * functions, this simplifies the implementation of "user permissions".
  */
-contract Ownable {
-  address public owner;
+// contract Ownable {
+//     address public owner;
 
 
-  /**
-   * @dev The Ownable constructor sets the original `owner` of the contract to the sender
-   * account.
-   */
-  function Ownable() {
-    owner = msg.sender;
-  }
+//   /**
+//    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
+//    * account.
+//    */
+//     function Ownable() {
+//         owner = msg.sender;
+//     }
 
 
-  /**
-   * @dev Throws if called by any account other than the owner.
-   */
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
+//   /**
+//    * @dev Throws if called by any account other than the owner.
+//    */
+//    modifier onlyOwner() {
+//        require(msg.sender == owner);
+//         _;
+//     }
 
 
-  /**
-   * @dev Allows the current owner to transfer control of the contract to a newOwner.
-   * @param newOwner The address to transfer ownership to.
-   */
-  function transferOwnership(address newOwner) onlyOwner {
-    if (newOwner != address(0)) {
-      owner = newOwner;
-    }
-  }
+//   /**
+//    * @dev Allows the current owner to transfer control of the contract to a newOwner.
+//    * @param newOwner The address to transfer ownership to.
+//    */
+//   function transferOwnership(address newOwner) onlyOwner {
+//     if (newOwner != address(0)) {
+//       owner = newOwner;
+//     }
+//   }
 
-}
+// }
 
 contract ERC721 {
     // Required methods
@@ -190,10 +190,9 @@ contract GunBase is GunAccessControl {
 
     //The address of the ClockAuction contract that handles sales of Guns. This also handles
     //P2P sales.
-    SaleClockAuction public saleAuction;
 
     //Assigns ownership of a specific Gun to a new address.
-    function _transfer(address _from, address _to, uint246 _tokenID) internal {
+    function _transfer(address _from, address _to, uint256 _tokenID) internal {
         ownershipTokenCount[_to]++;
         gunIndexToOwner[_tokenID] = _to;
 
@@ -205,7 +204,8 @@ contract GunBase is GunAccessControl {
         Transfer(_from, _to, _tokenID);
     }
 
-    funtion createGun(string _name, string _serial, string _manufacturer, address _owner) internal returns (uint) {
+    //Creates a new Gun Struct.
+    function createGun(string _name, string _serial, string _manufacturer, address _owner) internal returns (uint) {
         Gun memory _newGun = Gun({
             name: _name,
             serial: _serial,
@@ -250,14 +250,13 @@ contract ERC721Metadata {
 
 contract GunOwnership is GunBase, ERC721 {
     //Name and symbol of the non fungible token.
-    string public constant name = "PISTL"
-    string public constant symbole = "P"
+    string public constant name = "PISTL";
+    string public constant symbol = "P";
 
     // The contract that will return gun metadata
     ERC721Metadata public erc721Metadata;
 
-    bytes4 constant InterfaceSignature_ERC165 =
-        bytes4(keccak256('supportsInterface(bytes4)'));
+    bytes4 constant InterfaceSignature_ERC165 = bytes4(keccak256("supportsInterface(bytes4)"));
 
     bytes4 constant InterfaceSignature_ERC721 =
         bytes4(keccak256('name()')) ^
@@ -550,8 +549,8 @@ contract GunCore {
 
         // if this variable is 0 then it's not gestating
         name = _gun.name;
-        manufacturer = _gun.manufacturer
-        serialNumber = _gun.serial
+        manufacturer = _gun.manufacturer;
+        serialNumber = _gun.serial;
     }
 
     ///  Override unpause so it requires all external contract addresses
