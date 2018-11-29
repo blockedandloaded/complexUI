@@ -1,43 +1,4 @@
-pragma solidity ^0.4.17;
-
-/**
- * @title Ownable
- * @dev The Ownable contract has an owner address, and provides basic authorization control
- * functions, this simplifies the implementation of "user permissions".
- */
-// contract Ownable {
-//     address public owner;
-
-
-//   /**
-//    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
-//    * account.
-//    */
-//     function Ownable() {
-//         owner = msg.sender;
-//     }
-
-
-//   /**
-//    * @dev Throws if called by any account other than the owner.
-//    */
-//    modifier onlyOwner() {
-//        require(msg.sender == owner);
-//         _;
-//     }
-
-
-//   /**
-//    * @dev Allows the current owner to transfer control of the contract to a newOwner.
-//    * @param newOwner The address to transfer ownership to.
-//    */
-//   function transferOwnership(address newOwner) onlyOwner {
-//     if (newOwner != address(0)) {
-//       owner = newOwner;
-//     }
-//   }
-
-// }
+pragma solidity ^0.4.23;
 
 contract ERC721 {
     // Required methods
@@ -192,16 +153,16 @@ contract GunBase is GunAccessControl {
     //P2P sales.
 
     //Assigns ownership of a specific Gun to a new address.
-    function _transfer(address _from, address _to, uint256 _tokenID) internal {
+    function _transfer(address _from, address _to, uint256 _tokenId) internal {
         ownershipTokenCount[_to]++;
-        gunIndexToOwner[_tokenID] = _to;
+        gunIndexToOwner[_tokenId] = _to;
 
         if (_from != address(0)) {
             ownershipTokenCount[_from]--;
             delete gunIndexToApproved[_tokenId];
         }
 
-        Transfer(_from, _to, _tokenID);
+        emit Transfer(_from, _to, _tokenId);
     }
 
     //Creates a new Gun Struct.
@@ -221,13 +182,11 @@ contract GunBase is GunAccessControl {
         return newGunID;
     }
 
-    function setSecondsPerBlock(uint256 secs) external onlyCLevel {
+    function setSecondsPerBlock(uint256 secs) external {
         secondsPerBlock = secs;
     }
 }
 
-/// @title The external contract that is responsible for generating metadata for the guns,
-///  it has one function that will return the data as bytes.
 contract ERC721Metadata {
     /// @dev Given a token Id, returns a byte array that is supposed to be converted into string.
     function getMetadata(uint256 _tokenId, string) public view returns (bytes32[4] buffer, uint256 count) {
@@ -285,7 +244,7 @@ contract GunOwnership is GunBase, ERC721 {
     }
 
     //Checks if given address is current owner of a particular gun.
-    function _owns(address _claimer, uint245 _tokenID) internal view returns (bool) {
+    function _owns(address _claimer, uint256 _tokenID) internal view returns (bool) {
         return gunIndexToOwner[_tokenID] == _claimer;
     }
 
@@ -328,7 +287,7 @@ contract GunOwnership is GunBase, ERC721 {
         _approve(_tokenId, _to);
 
         // Emit approval event.
-        Approval(msg.sender, _to, _tokenId);
+        emit Approval(msg.sender, _to, _tokenId);
     }
 
     // Transfer a Gun owned by another address, for which the calling address
@@ -385,112 +344,10 @@ contract GunOwnership is GunBase, ERC721 {
             return result;
         }
     }
-
-    /// Adapted from memcpy() by @arachnid (Nick Johnson <arachnid@notdot.net>)
-    ///  This method is licenced under the Apache License.
-    ///  Ref: https://github.com/Arachnid/solidity-stringutils/blob/2f6ca9accb48ae14c66f1437ec50ed19a0616f78/strings.sol
-    function _memcpy(uint _dest, uint _src, uint _len) private view {
-        // Copy word-length chunks while possible
-        for(; _len >= 32; _len -= 32) {
-            assembly {
-                mstore(_dest, mload(_src))
-            }
-            _dest += 32;
-            _src += 32;
-        }
-
-        // Copy remaining bytes
-        uint256 mask = 256 ** (32 - _len) - 1;
-        assembly {
-            let srcpart := and(mload(_src), not(mask))
-            let destpart := and(mload(_dest), mask)
-            mstore(_dest, or(destpart, srcpart))
-        }
-    }
-
-    /// @dev Adapted from toString(slice) by @arachnid (Nick Johnson <arachnid@notdot.net>)
-    ///  This method is licenced under the Apache License.
-    ///  Ref: https://github.com/Arachnid/solidity-stringutils/blob/2f6ca9accb48ae14c66f1437ec50ed19a0616f78/strings.sol
-    function _toString(bytes32[4] _rawBytes, uint256 _stringLength) private view returns (string) {
-        var outputString = new string(_stringLength);
-        uint256 outputPtr;
-        uint256 bytesPtr;
-
-        assembly {
-            outputPtr := add(outputString, 32)
-            bytesPtr := _rawBytes
-        }
-
-        _memcpy(outputPtr, bytesPtr, _stringLength);
-
-        return outputString;
-    }
-
-    /// @notice Returns a URI pointing to a metadata package for this token conforming to
-    ///  ERC-721 (https://github.com/ethereum/EIPs/issues/721)
-    /// @param _tokenId The ID number of the Gun whose metadata should be returned.
-    function tokenMetadata(uint256 _tokenId, string _preferredTransport) external view returns (string infoUrl) {
-        require(erc721Metadata != address(0));
-        bytes32[4] memory buffer;
-        uint256 count;
-        (buffer, count) = erc721Metadata.getMetadata(_tokenId, _preferredTransport);
-
-        return _toString(buffer, count);
-    }
 }
-
-
-
-
-/**
- * @title Pausable
- * @dev Base contract which allows children to implement an emergency stop mechanism.
- */
-contract Pausable is Ownable {
-  event Pause();
-  event Unpause();
-
-  bool public paused = false;
-
-
-  /**
-   * @dev modifier to allow actions only when the contract IS paused
-   */
-  modifier whenNotPaused() {
-    require(!paused);
-    _;
-  }
-
-  /**
-   * @dev modifier to allow actions only when the contract IS NOT paused
-   */
-  modifier whenPaused {
-    require(paused);
-    _;
-  }
-
-  /**
-   * @dev called by the owner to pause, triggers stopped state
-   */
-  function pause() onlyOwner whenNotPaused returns (bool) {
-    paused = true;
-    Pause();
-    return true;
-  }
-
-  /**
-   * @dev called by the owner to unpause, returns to normal state
-   */
-  function unpause() onlyOwner whenPaused returns (bool) {
-    paused = false;
-    Unpause();
-    return true;
-  }
-}
-
 
 //Blocked and Loaded main contract.
-contract GunCore {
+contract GunCore is GunOwnership {
 
     // This is the main Blocked and Loaded contract.
     //
@@ -511,7 +368,7 @@ contract GunCore {
     address public newContractAddress;
 
     //Creates the main Blocked and Loaded smart contract instance.
-    function GunCore() public {
+    constructor() public {
         // Starts paused.
         paused = true;
 
@@ -522,7 +379,7 @@ contract GunCore {
         cooAddress = msg.sender;
 
         // start with invalid gun to prevent ownership issues.
-        _createGun(0, 0, 0, uint256(-1), address(0));
+        createGun("", "", "", address(0));
     }
 
     ///  Used to mark the smart contract as upgraded, in case there is a serious
@@ -533,7 +390,7 @@ contract GunCore {
     function setNewAddress(address _v2Address) external onlyCEO whenPaused {
         // See README.md for updgrade plan
         newContractAddress = _v2Address;
-        ContractUpgrade(_v2Address);
+        emit ContractUpgrade(_v2Address);
     }
 
     /// Returns all the relevant information about a specific gun.

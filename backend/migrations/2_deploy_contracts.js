@@ -1,5 +1,5 @@
-var PISTL = artifacts.require("./PISTL.sol");
+var Blocked = artifacts.require("./Blocked.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(PISTL);
+  deployer.deploy(Blocked);
 };
