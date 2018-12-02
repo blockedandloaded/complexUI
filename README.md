@@ -2,6 +2,7 @@
 
 # To run this version of our UI: 
     • clone repo 
+    • npm install gulp
     • gulp serve
         
 Note that if you have not installe Node.js this may require you to download it.
