@@ -2,7 +2,6 @@ This is a more fleshed out and more complex UI with features that the simpler, b
 
 Ideally we would eventually merge these two to form a hybrid UI! This frontend is not as lightweight as our other and gave us issues with deployment.
 
-to run this clone the repository locally and run: 
-    • gulp serve
+to run this clone the repository locally and run: gulp serve
     
 Note that if you have not installe Node.js this may require you to download it.
