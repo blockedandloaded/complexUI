@@ -13,11 +13,10 @@
     var messages = [
       {
         "id": "4563faass",
-        "name": "GUN NAME 1",
-        "subject": "Great text",
+        "name": "Ruger LCR9",
+        "subject": "Jackson Stewart",
         "date": "2015-08-28T07:57:09",
-        "body": $sce.trustAsHtml("<p>Hey John, </p><p>Check out this cool text.</p>"),
-        "pic": "img/Nasta.png",
+        "body": $sce.trustAsHtml(""),
         "email": "petraramsey@mail.com",
         "attachment": "poem.txt",
         "position": "Great Employee",
@@ -26,13 +25,11 @@
       },
       {
         "id": "4563fdfvd",
-        "name": "GUN NAME 2",
-        "subject": "Lores ipsum",
+        "name": "Smith & Wesson M&P",
+        "subject": "Randall Brooks",
         "date": "2015-11-19T03:30:45",
         "important": false,
-        "body": $sce.trustAsHtml("<p>Hey John, </p><br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ex mauris, ultrices vel lectus quis, scelerisque hendrerit ipsum. Suspendisse ullamcorper turpis neque, eget dapibus magna placerat ac. Suspendisse rhoncus ligula ac mi tempus varius ut sed lacus. Sed et commodo nulla, et placerat leo. Nam rhoncus vulputate sem non pharetra. Praesent fringilla massa in laoreet convallis. Aliquam lobortis dui a congue facilisis. Aenean dapibus semper semper. Quisque aliquam, nibh dapibus interdum condimentum, ex velit tempor tortor, at vestibulum magna leo quis leo. Morbi pulvinar varius erat ac rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst.</p>" +
-          "<br><p>Cras rhoncus quam ipsum, vel dignissim nisl egestas sed. Aliquam erat volutpat. Integer eu nisl elit. Donec malesuada diam vitae tellus luctus tincidunt. Donec tempus blandit neque, rutrum egestas ipsum sagittis tempor. Curabitur volutpat ligula enim, nec vehicula purus molestie at. Sed a facilisis enim, nec molestie magna. Donec in augue non est viverra dapibus vel tempus risus. Nam porttitor purus sit amet hendrerit ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>"),
-        "pic": "img/Nasta.png",
+           "body": $sce.trustAsHtml(""),
         "email": "petraramsey@mail.com",
         "position": "Great Employee",
         "tag": "sold",
@@ -41,11 +38,10 @@
       {
         "id": "4563zxcss",
         "name": "GUN NAME 3",
-        "subject": "Lores ipsum",
+        "subject": "Jackson Stewart",
         "date": "2015-10-19T03:30:45",
         "important": false,
         "body": $sce.trustAsHtml("<p>Hey Nasta, </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>"),
-        "pic": "img/Nasta.png",
         "email": "petraramsey@mail.com",
         "position": "Great Employee",
         "tag": "bought",
@@ -53,12 +49,10 @@
       },
       {
         "id": "8955sddf",
-        "name": "GUN NAME 4",
-        "subject": "New Design",
+        "name": "Walther CCP",
+        "subject": "Walter Jovis",
         "date": "2015-05-05T12:59:45",
-        "body": $sce.trustAsHtml("<p>Hey John, Consectetur adipiscing elit</p><br>" +
-          "<p>Cras rhoncus quam ipsum, vel dignissim nisl egestas sed. Aliquam erat volutpat. Integer eu nisl elit. Donec malesuada diam vitae tellus luctus tincidunt. Donec tempus blandit neque, rutrum egestas ipsum sagittis tempor. Curabitur volutpat ligula enim, nec vehicula purus molestie at. Sed a facilisis enim, nec molestie magna. Donec in augue non est viverra dapibus vel tempus risus. Nam porttitor purus sit amet hendrerit ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>"),
-        "pic": "img/Nick.png",
+        "body": $sce.trustAsHtml(""),
         "email": "barlowshort@mail.com",
         "position": "Graphical designer",
         "attachment": "design.psd",
@@ -67,10 +61,10 @@
       },
       {
         "id": "8955sdfcc",
-        "name": "GUN NAME 5",
-        "subject": "Gift card",
+        "name": "Glock 19 ",
+        "subject": "Max Green",
         "date": "2015-07-18T10:19:01",
-        "body": $sce.trustAsHtml("<p>Hey John, </p><br><p>Consectetur adipiscing elit, Lorem ipsum dolor sit amet</p>"),
+        "body": $sce.trustAsHtml(""),
         "pic": "img/Nick.png",
         "email": "barlowshort@mail.com",
         "position": "Graphical designer",
@@ -79,126 +73,102 @@
       },
       {
         "id": "8955asewf",
-        "name": "GUN NAME 6",
-        "subject": "Some news",
+        "name": "Springfield XD",
+        "subject": "Jessica Green",
         "date": "2015-09-23T03:04:10",
-        "body": $sce.trustAsHtml("<p>Hey John, </p><br><p>Integer eu nisl elit. Donec malesuada diam vitae tellus luctus tincidunt. Donec tempus blandit neque, rutrum egestas ipsum sagittis tempor. Curabitur volutpat ligula enim, nec vehicula purus molestie at. Sed a facilisis enim, nec molestie magna. Donec in augue non est viverra dapibus vel tempus risus. Nam porttitor purus sit amet hendrerit ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>"),
+        "body": $sce.trustAsHtml(""),
         "pic": "img/Nick.png",
         "email": "barlowshort@mail.com",
-        "position": "Graphical designer",
+        "position": "Joseph Swartley",
         "tag": "sold",
         "labels": ['inbox', 'important']
       },
       {
         "id": "2334uudsa",
-        "name": "GUN NAME 6",
-        "subject": "Street Art",
+        "name": "APX SW22",
+        "subject": "Karen Noth",
         "date": "2015-11-22T10:05:09",
-        "body": $sce.trustAsHtml("<p>Hey John, </p><p>Aliquam eu facilisis eros, quis varius est.</p>" +
-          "<p>Consectetur adipiscing elit. Aliquam sodales sem in nibh pellentesque, ac dignissim mi dapibus.</p>" +
-          "<p>Lorem ipsum dolor sit amet! Nullam imperdiet justo a ipsum laoreet euismod.</p>" +
-          "<br><p>Cras tincidunt fermentum lectus, quis scelerisque lorem volutpat sed." +
-          "Sed quis orci sed nisl sagittis viverra id at mauris. Nam venenatis mi nibh. Sed fringilla mattis vehic</p>"),
-        "pic": "img/Kostya.png",
+        "body": $sce.trustAsHtml(""),
         "email": "schwart@mail.com",
-        "position": "Technical Chef",
+        "position": "Andrew Callahan",
         "attachment": "file.doc",
         "tag": "sold",
         "labels": ['inbox', 'important']
       },
       {
         "id": "2334aefvv",
-        "name": "GUN NAME 7",
-        "subject": "New product",
+        "name": "Beretta PX4 Storm",
+        "subject": "Gary Pool",
         "date": "2015-06-22T06:26:10",
-        "body": $sce.trustAsHtml("<p>Hello John, </p><p>Lorem ipsum dolor sit amet!</p>" +
-          "<p>Consectetur adipiscing elit. Aliquam sodales sem in nibh pellentesque, ac dignissim mi dapibus.</p>" +
-          "<p>Aliquam eu facilisis eros, quis varius est. Nullam imperdiet justo a ipsum laoreet euismod.</p>" +
-          "<br><p>Nulla facilisi. Nulla congue, arcu eget blandit lacinia, leo ante ullamcorper lectus, vel pulvinar justo ipsum vitae justo." +
-          "Cras tincidunt fermentum lectus, quis scelerisque lorem volutpat sed. Sed quis orci sed nisl sagittis viverra id at mauris. Nam venenatis mi nibh. Sed fringilla mattis vehic</p>"),
-        "pic": "img/Kostya.png",
+        "body": $sce.trustAsHtml(""),
         "email": "schwart@mail.com",
-        "position": "Technical Chef",
+        "position": "Bob Ross",
         "tag": "sold",
         "labels": ['inbox', 'important']
       },
       {
         "id": "2334cvdss",
         "name": "GUN NAME 8",
-        "subject": "Old product",
+        "subject": "Alex Stand",
         "date": "2015-06-22T06:26:10",
-        "body": $sce.trustAsHtml("<p>Hello John, </p>" +
-          "<p>Consectetur adipiscing elit. Aliquam sodales sem in nibh pellentesque, ac dignissim mi dapibus.</p>" +
-          "<br>"+
-          "<p>Cras tincidunt fermentum lectus, quis scelerisque lorem volutpat sed. Sed quis orci sed nisl sagittis viverra id at mauris. Nam venenatis mi nibh. Sed fringilla mattis vehic</p>"),
-        "pic": "img/Kostya.png",
+        "body": $sce.trustAsHtml(""),
         "email": "schwart@mail.com",
-        "position": "Technical Chef",
+        "position": "Michael Radler",
         "tag": "sold",
         "labels": ['trash']
       },
       {
         "id": "8223xzxfn",
         "name": "GUN NAME 9",
-        "subject": "Skype moji",
+        "subject": "Jill Fuster",
         "date": "2015-07-16T06:47:53",
-        "body": $sce.trustAsHtml("<p>Hello John, </p><p>Aliquam sodales sem in nibh pellentesque</p>" +
-          "<p>Lorem ipsum dolor I find moji in skype sit amet!.</p>"),
-        "pic": "img/Andrey.png",
+        "body": $sce.trustAsHtml(""),
         "email": "lakeishaphillips@mail.com",
-        "position": "Mobile Developer",
+        "position": "Jennifer Brookside",
         "tag": 'sold',
         "labels": ['trash']
       },
       {
         "id": "8223sdffn",
         "name": "GUN NAME 10",
-        "subject": "My App",
+        "subject": "Marc Haversin",
         "date": "2015-06-20T07:05:02",
-        "body": $sce.trustAsHtml("<p>Hey Vlad. </p><p>Lorem ipsum dolor sit amet!</p>" +
-          "<p>Consectetur My Falasson App elit. Aliquam sodales sem in nibh pellentesque, ac dignissim mi dapibus.</p>"),
-        "pic": "img/Andrey.png",
+        "body": $sce.trustAsHtml(""),
         "email": "lakeishaphillips@mail.com",
-        "position": "Mobile Developer",
+        "position": "Karen Hutt",
         "tag": 'sold',
         "labels": ['spam']
       },
       {
         "id": "9391xdsff",
         "name": "GUN NAME 11",
-        "subject": "Cool",
+        "subject": "Jake Pool",
         "date": "2015-03-31T11:52:58",
-        "body": $sce.trustAsHtml("<p>Hey Vlad. </p><p>Aliquam sodales sem in nibh pellentesque</p>" +
-          "<p>Cras tincidunt fermentum lectus, quis scelerisque lorem volutpat sed.</p>"),
-        "pic": "img/Vlad.png",
+        "body": $sce.trustAsHtml(""),
         "email": "carlsongoodman@mail.com",
-        "position": "Fullstack man",
+        "position": "John Goodman",
         "tag": "bought",
         "labels": ['draft']
       },
       {
         "id": "8223xsdaa",
         "name": "GUN NAME 12",
-        "subject": "Car rent",
+        "subject": "Jacob Cohen",
         "date": "2015-02-25T10:58:58",
-        "body": $sce.trustAsHtml("<p>Hey Andrey. </p>" +
-          "<p>Cras tincidunt fermentum lectus, quis scelerisque lorem volutpat sed. Sed quis orci sed nisl sagittis viverra id at mauris. Nam venenatis mi nibh. Sed fringilla mattis vehic</p>"),
-        "pic": "img/Andrey.png",
+        "body": $sce.trustAsHtml(""),
         "email": "lakeishaphillips@mail.com",
-        "position": "Mobile Developer",
+        "position": "Carl Hullinger",
         "tag": "sold",
         "labels": ['draft']
       },
       {
         "id": "9391xdsff",
         "name": "GUN NAME 13",
-        "subject": "What next",
+        "subject": "Ryan Henry",
         "date": "2015-03-31T11:52:58",
-        "body": $sce.trustAsHtml("<p>Hey Vlad. </p><p>Lorem ipsum dolor sit amet!</p>" +
-          "<p>Esse esse labore tempor ullamco ullamco. Id veniam laborum c.</p>"),
-        "pic": "img/Vlad.png",
+        "body": $sce.trustAsHtml(""),
         "email": "carlsongoodman@mail.com",
-        "position": "Fullstack man",
+        "position": "Caroline Wolfram",
         "tag": "bought",
         "labels": ['sent']
       }
