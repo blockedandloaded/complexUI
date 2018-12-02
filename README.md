@@ -2,6 +2,7 @@
 
 # To run this version of our UI: 
     • clone repo 
+    • bower install
     • npm install gulp
     • gulp serve
         
